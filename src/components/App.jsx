@@ -22,7 +22,7 @@ export function App() {
         ({ name }) => name.toLowerCase() === contact.name.toLowerCase()
       )
     ) {
-      setContacts(contacts => [...contacts, contact]);
+      setContacts(prevContacts => [...prevContacts, contact]);
     } else {
       alert(`${contact.name} is already in contacts.`);
     }
